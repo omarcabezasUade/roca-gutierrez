@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Línea Roca | Inicio
+    </title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="topbar">
+
+            <div class="logo">
+                Línea Roca
+            </div>
+
+            <nav>
+
+                <ul class="menu">
+
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+
+                    <li>
+                        <a href="recorrido.html">Recorrido</a>
+                    </li>
+
+                    <li>
+                        <a href="horarios.html">Horarios</a>
+                    </li>
+
+                    <li>
+                        <a href="accesibilidad.html">Accesibilidad</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+        <section class="hero">
+
+            <div class="hero-texto">
+
+                <span class="etiqueta">
+                    Tren regional metropolitano
+                </span>
+
+                <h1>
+                    Plaza Constitución - Bosques - Gutiérrez
+                </h1>
+
+                <p>
+                    Servicio ferroviario de la Línea General Roca
+                    vía Temperley.
+                </p>
+
+                <div class="buscador">
+
+                    <div class="campo">
+
+                        <label>
+                            Origen
+                        </label>
+
+                        <select>
+
+                            <option>
+                                Plaza Constitución
+                            </option>
+
+                            <option>
+                                Temperley
+                            </option>
+
+                            <option>
+                                Bosques
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label>
+                            Destino
+                        </label>
+
+                        <select>
+
+                            <option>
+                                Bosques
+                            </option>
+
+                            <option>
+                                Juan María Gutiérrez
+                            </option>
+
+                            <option>
+                                Temperley
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label>
+                            Día
+                        </label>
+
+                        <select>
+
+                            <option>
+                                Lunes a viernes
+                            </option>
+
+                            <option>
+                                Sábado
+                            </option>
+
+                            <option>
+                                Domingo/Feriado
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                    <button onclick="mostrarMensaje()">
+                        Consultar
+                    </button>
+
+                </div>
+
+                <p id="mensaje" class="mensaje"></p>
+
+            </div>
+
+            <div class="hero-imagen">
+
+                <img
+                    src="img/constitucion.jpg"
+                    alt="Estación Plaza Constitución"
+                >
+
+            </div>
+
+        </section>
+
+    </header>
+
+    <main>
+
+        <section class="tarjetas-home">
+
+            <article class="card-home">
+
+                <img
+                    src="img/tren-roca.jpg"
+                    alt="Formación de la Línea Roca"
+                >
+
+                <div class="contenido-card">
+
+                    <h2>
+                        Recorrido
+                    </h2>
+
+                    <p>
+                        Conocé las estaciones principales,
+                        combinaciones y recorrido completo
+                        vía Temperley.
+                    </p>
+
+                    <a href="recorrido.html">
+                        Ver recorrido
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="card-home">
+
+                <img
+                    src="img/temperley.jpg"
+                    alt="Estación Temperley"
+                >
+
+                <div class="contenido-card">
+
+                    <h2>
+                        Horarios
+                    </h2>
+
+                    <p>
+                        Consultá horarios reales del servicio
+                        Constitución - Bosques - Gutiérrez.
+                    </p>
+
+                    <a href="horarios.html">
+                        Ver horarios
+                    </a>
+
+                </div>
+
+            </article>
+
+            <article class="card-home">
+
+                <img
+                    src="img/bosques.jpg"
+                    alt="Estación Bosques"
+                >
+
+                <div class="contenido-card">
+
+                    <h2>
+                        Accesibilidad
+                    </h2>
+
+                    <p>
+                        Información sobre accesos,
+                        señalización y criterios de usabilidad.
+                    </p>
+
+                    <a href="accesibilidad.html">
+                        Ver accesibilidad
+                    </a>
+
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <p>
+            Trabajo práctico individual - Diseño y Desarrollo Web
+        </p>
+
+    </footer>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
