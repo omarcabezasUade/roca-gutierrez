@@ -2,132 +2,83 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>
-        Línea Roca | Accesibilidad
-    </title>
-
+    <title>Línea Roca | Accesibilidad</title>
     <link rel="stylesheet" href="css/estilos.css">
-
 </head>
 
 <body>
-
     <header class="header-interno">
-
         <div class="topbar">
+            <a class="logo" href="index.html">Línea Roca</a>
 
-            <div class="logo">
-                Línea Roca
-            </div>
-
-            <nav>
-
+            <nav aria-label="Navegación principal">
                 <ul class="menu">
-
-                    <li>
-                        <a href="index.html">Inicio</a>
-                    </li>
-
-                    <li>
-                        <a href="recorrido.html">Recorrido</a>
-                    </li>
-
-                    <li>
-                        <a href="horarios.html">Horarios</a>
-                    </li>
-
-                    <li>
-                        <a href="accesibilidad.html">Accesibilidad</a>
-                    </li>
-
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="recorrido.html">Recorrido</a></li>
+                    <li><a href="horarios.html">Horarios</a></li>
+                    <li><a aria-current="page" href="accesibilidad.html">Accesibilidad</a></li>
                 </ul>
-
             </nav>
-
         </div>
 
-        <h1>
-            Accesibilidad y usabilidad
-        </h1>
-
+        <div class="titulo-pagina">
+            <span class="etiqueta">Experiencia de usuario</span>
+            <h1>Accesibilidad y usabilidad</h1>
+            <p>Criterios aplicados para que la consulta sea clara, legible y fácil de navegar.</p>
+        </div>
     </header>
 
     <main class="contenedor">
-
         <section class="tarjeta">
-
+            <h2>Accesibilidad del servicio y del sitio</h2>
             <div class="grid-accesibilidad">
+                <article class="item-acceso">
+                    <h3>Accesos y rampas</h3>
+                    <p>Se destaca la necesidad de accesos adaptados en estaciones principales y espacios de circulación claros.</p>
+                </article>
 
-                <div class="item-acceso">
+                <article class="item-acceso">
+                    <h3>Información visual</h3>
+                    <p>Las tablas separan sentido, día y estación para que la información pueda escanearse rápido.</p>
+                </article>
 
-                    <h2>
-                        Rampas y accesos
-                    </h2>
+                <article class="item-acceso">
+                    <h3>Contraste adecuado</h3>
+                    <p>La paleta combina Azul Roca, Rojo acento, Gris plataforma y Noche Constitución para mejorar la lectura.</p>
+                </article>
 
-                    <p>
-                        Las estaciones principales cuentan
-                        con accesos adaptados y rampas.
-                    </p>
+                <article class="item-acceso">
+                    <h3>Tipografía legible</h3>
+                    <p>Se usa una familia sans serif, tamaños consistentes y espacios amplios entre bloques de contenido.</p>
+                </article>
 
-                </div>
+                <article class="item-acceso">
+                    <h3>Navegación clara</h3>
+                    <p>El menú mantiene las mismas secciones en todas las páginas y marca la página activa.</p>
+                </article>
 
-                <div class="item-acceso">
-
-                    <h2>
-                        Información sonora
-                    </h2>
-
-                    <p>
-                        Los andenes poseen anuncios
-                        de audio y cartelería digital.
-                    </p>
-
-                </div>
-
-                <div class="item-acceso">
-
-                    <h2>
-                        Contraste visual
-                    </h2>
-
-                    <p>
-                        La página utiliza colores de alto contraste
-                        para facilitar la lectura.
-                    </p>
-
-                </div>
-
-                <div class="item-acceso">
-
-                    <h2>
-                        Navegación clara
-                    </h2>
-
-                    <p>
-                        El menú superior permite acceder rápidamente
-                        a cada sección.
-                    </p>
-
-                </div>
-
+                <article class="item-acceso">
+                    <h3>Diseño responsive</h3>
+                    <p>El contenido se adapta a pantallas chicas y las tablas permiten desplazamiento horizontal.</p>
+                </article>
             </div>
-
         </section>
 
+        <section class="tarjeta">
+            <h2>Justificación de diseño</h2>
+            <p>
+                El diseño prioriza consultas rápidas de transporte: recorridos visibles, horarios reales,
+                botones con alto contraste y textos breves. La organización responde a usuarios que necesitan
+                decidir un viaje en poco tiempo, como estudiantes, trabajadores, familias y personas mayores.
+            </p>
+        </section>
     </main>
 
     <footer class="footer">
-
-        <p>
-            Diseño responsive y accesible
-        </p>
-
+        <p>Diseño responsive, navegación clara y contenido organizado por necesidad del pasajero.</p>
     </footer>
-
 </body>
 
 </html>

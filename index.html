@@ -2,265 +2,139 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>
-        Línea Roca | Inicio
-    </title>
-
+    <title>Línea Roca | Bosques - Gutiérrez</title>
     <link rel="stylesheet" href="css/estilos.css">
-
 </head>
 
 <body>
-
-    <header class="header">
-
+    <header class="site-header">
         <div class="topbar">
+            <a class="logo" href="index.html">Línea Roca</a>
 
-            <div class="logo">
-                Línea Roca
-            </div>
-
-            <nav>
-
+            <nav aria-label="Navegación principal">
                 <ul class="menu">
-
-                    <li>
-                        <a href="index.html">Inicio</a>
-                    </li>
-
-                    <li>
-                        <a href="recorrido.html">Recorrido</a>
-                    </li>
-
-                    <li>
-                        <a href="horarios.html">Horarios</a>
-                    </li>
-
-                    <li>
-                        <a href="accesibilidad.html">Accesibilidad</a>
-                    </li>
-
+                    <li><a aria-current="page" href="index.html">Inicio</a></li>
+                    <li><a href="recorrido.html">Recorrido</a></li>
+                    <li><a href="horarios.html">Horarios</a></li>
+                    <li><a href="accesibilidad.html">Accesibilidad</a></li>
                 </ul>
-
             </nav>
-
         </div>
 
         <section class="hero">
-
             <div class="hero-texto">
-
-                <span class="etiqueta">
-                    Tren regional metropolitano
-                </span>
-
-                <h1>
-                    Plaza Constitución - Bosques - Gutiérrez
-                </h1>
-
+                <span class="etiqueta">Tren regional metropolitano</span>
+                <h1>Plaza Constitución - Bosques - Gutiérrez</h1>
                 <p>
-                    Servicio ferroviario de la Línea General Roca
-                    vía Temperley.
+                    Servicio de la Línea General Roca que conecta la Ciudad de Buenos Aires
+                    con el sur del Gran Buenos Aires, con extensión entre Bosques y Juan
+                    María Gutiérrez.
                 </p>
 
-                <div class="buscador">
-
+                <form class="buscador" id="consulta-form">
                     <div class="campo">
-
-                        <label>
-                            Origen
-                        </label>
-
-                        <select>
-
-                            <option>
-                                Plaza Constitución
-                            </option>
-
-                            <option>
-                                Temperley
-                            </option>
-
-                            <option>
-                                Bosques
-                            </option>
-
+                        <label for="origen">Origen</label>
+                        <select id="origen" name="origen">
+                            <option value="constitucion">Plaza Constitución</option>
+                            <option value="temperley">Temperley</option>
+                            <option value="bosques">Bosques</option>
+                            <option value="gutierrez">Juan María Gutiérrez</option>
                         </select>
-
                     </div>
 
                     <div class="campo">
-
-                        <label>
-                            Destino
-                        </label>
-
-                        <select>
-
-                            <option>
-                                Bosques
-                            </option>
-
-                            <option>
-                                Juan María Gutiérrez
-                            </option>
-
-                            <option>
-                                Temperley
-                            </option>
-
+                        <label for="destino">Destino</label>
+                        <select id="destino" name="destino">
+                            <option value="bosques">Bosques</option>
+                            <option value="gutierrez">Juan María Gutiérrez</option>
+                            <option value="temperley">Temperley</option>
+                            <option value="constitucion">Plaza Constitución</option>
                         </select>
-
                     </div>
 
                     <div class="campo">
-
-                        <label>
-                            Día
-                        </label>
-
-                        <select>
-
-                            <option>
-                                Lunes a viernes
-                            </option>
-
-                            <option>
-                                Sábado
-                            </option>
-
-                            <option>
-                                Domingo/Feriado
-                            </option>
-
+                        <label for="dia">Día</label>
+                        <select id="dia" name="dia">
+                            <option value="habiles">Lunes a viernes</option>
+                            <option value="sabado">Sábado</option>
+                            <option value="domingo">Domingos y feriados</option>
                         </select>
-
                     </div>
 
-                    <button onclick="mostrarMensaje()">
-                        Consultar
-                    </button>
+                    <button type="submit">Consultar</button>
+                </form>
 
-                </div>
-
-                <p id="mensaje" class="mensaje"></p>
-
+                <p id="mensaje" class="mensaje" role="status"></p>
             </div>
 
             <div class="hero-imagen">
-
-                <img
-                    src="img/constitucion.jpg"
-                    alt="Estación Plaza Constitución"
-                >
-
+                <img src="img/constitucion.jpg" alt="Hall de la estación Plaza Constitución">
             </div>
-
         </section>
-
     </header>
 
     <main>
-
-        <section class="tarjetas-home">
-
-            <article class="card-home">
-
-                <img
-                    src="img/tren-roca.jpg"
-                    alt="Formación de la Línea Roca"
-                >
-
-                <div class="contenido-card">
-
-                    <h2>
-                        Recorrido
-                    </h2>
-
-                    <p>
-                        Conocé las estaciones principales,
-                        combinaciones y recorrido completo
-                        vía Temperley.
-                    </p>
-
-                    <a href="recorrido.html">
-                        Ver recorrido
-                    </a>
-
-                </div>
-
+        <section class="resumen-servicio" aria-label="Datos principales del servicio">
+            <article>
+                <span class="dato">17 Estaciones</span>
+                <p> del recorrido vía Temperley hasta Gutiérrez</p>
             </article>
-
-            <article class="card-home">
-
-                <img
-                    src="img/temperley.jpg"
-                    alt="Estación Temperley"
-                >
-
-                <div class="contenido-card">
-
-                    <h2>
-                        Horarios
-                    </h2>
-
-                    <p>
-                        Consultá horarios reales del servicio
-                        Constitución - Bosques - Gutiérrez.
-                    </p>
-
-                    <a href="horarios.html">
-                        Ver horarios
-                    </a>
-
-                </div>
-
+            <article>
+                <span class="dato">30/03/2026</span>
+                <p>vigencia del cuadro horario del servicio</p>
             </article>
-
-            <article class="card-home">
-
-                <img
-                    src="img/bosques.jpg"
-                    alt="Estación Bosques"
-                >
-
-                <div class="contenido-card">
-
-                    <h2>
-                        Accesibilidad
-                    </h2>
-
-                    <p>
-                        Información sobre accesos,
-                        señalización y criterios de usabilidad.
-                    </p>
-
-                    <a href="accesibilidad.html">
-                        Ver accesibilidad
-                    </a>
-
-                </div>
-
+            <article>
+                <span class="dato">15 min</span>
+                <p>tiempo aproximado entre Bosques y Gutiérrez</p>
             </article>
-
         </section>
 
+        <section class="tarjetas-home">
+            <article class="card-home">
+                <img src="img/tren-roca.jpg" alt="Formación eléctrica de la Línea Roca">
+                <div class="contenido-card">
+                    <h2>Información del servicio</h2>
+                    <p>
+                        Recorrido urbano e interurbano orientado a trabajadores, estudiantes
+                        y vecinos que viajan entre Constitución, Temperley, Bosques y Gutiérrez.
+                    </p>
+                    <a href="recorrido.html">Ver recorrido</a>
+                </div>
+            </article>
+
+            <article class="card-home">
+                <img src="img/temperley.jpg" alt="Andenes de la estación Temperley">
+                <div class="contenido-card">
+                    <h2>Horarios reales</h2>
+                    <p>
+                        Tablas con salidas del cuadro horario Bosques - Gutiérrez,
+                        más frecuencia general del servicio a Constitución.
+                    </p>
+                    <a href="horarios.html">Ver horarios</a>
+                </div>
+            </article>
+
+            <article class="card-home">
+                <img src="img/bosques.jpg" alt="Estación Bosques de la Línea Roca">
+                <div class="contenido-card">
+                    <h2>Accesibilidad</h2>
+                    <p>
+                        Criterios de lectura, contraste, navegación clara y asistencia para
+                        mejorar la experiencia de todos los pasajeros.
+                    </p>
+                    <a href="accesibilidad.html">Ver accesibilidad</a>
+                </div>
+            </article>
+        </section>
     </main>
 
     <footer class="footer">
-
-        <p>
-            Trabajo práctico individual - Diseño y Desarrollo Web
-        </p>
-
+        <p>Trabajo práctico individual - Diseño y Desarrollo Web - UADE</p>
     </footer>
 
     <script src="js/app.js"></script>
-
 </body>
 
 </html>
