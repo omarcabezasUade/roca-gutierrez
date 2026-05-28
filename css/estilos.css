@@ -3,7 +3,10 @@
     --azul-oscuro:#1a1a2e;
     --celeste:#e8f0fb;
     --verde:#1b7a3e;
+    --verde-claro:#e7f6ec;
+    --verde-brillante:#38b86f;
     --rojo:#c8102e;
+    --rojo-claro:#fde9ee;
     --fondo:#f5f5f0;
     --texto:#1a1a2e;
     --muted:#4e5564;
@@ -31,7 +34,9 @@ a{
 
 .site-header,
 .header-interno{
-    background:var(--azul);
+    background:
+        linear-gradient(135deg,rgba(27,122,62,0.24) 0 18%,transparent 18% 68%,rgba(200,16,46,0.22) 68% 100%),
+        var(--azul);
     color:var(--blanco);
     padding:20px 8% 42px;
 }
@@ -54,6 +59,88 @@ a{
     text-decoration:none;
 }
 
+.ramal-logo{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    max-width:430px;
+}
+
+.logo-texto{
+    display:flex;
+    flex-direction:column;
+    line-height:1.1;
+}
+
+.logo-texto strong{
+    font-size:1.36rem;
+}
+
+.logo-texto small{
+    margin-top:4px;
+    color:#dcffe1;
+    font-size:0.96rem;
+    font-weight:800;
+    text-transform:uppercase;
+}
+
+.ramal-icono{
+    position:relative;
+    display:grid;
+    place-items:center;
+    flex:0 0 88px;
+    width:88px;
+    height:88px;
+    border:4px solid #f6fbff;
+    border-radius:50%;
+    background:linear-gradient(135deg,var(--verde) 0 48%,var(--rojo) 48% 100%);
+    box-shadow:0 5px 14px rgba(0,0,0,0.22);
+    overflow:hidden;
+    transition:transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.ramal-icono::before,
+.ramal-icono::after{
+    content:"";
+    position:absolute;
+    top:14%;
+    width:5px;
+    height:72%;
+    background:rgba(255,255,255,0.72);
+    border-radius:999px;
+    z-index:1;
+}
+
+.ramal-icono::before{
+    left:31px;
+    transform:rotate(34deg);
+}
+
+.ramal-icono::after{
+    right:31px;
+    transform:rotate(-34deg);
+}
+
+.ramal-icono span{
+    position:relative;
+    z-index:2;
+    display:grid;
+    place-items:center;
+    width:54px;
+    height:54px;
+    border-radius:50%;
+    background:var(--azul);
+    color:var(--blanco);
+    font-size:1.38rem;
+    font-weight:900;
+    letter-spacing:0;
+}
+
+.ramal-logo:hover .ramal-icono{
+    transform:translateY(-1px);
+    box-shadow:0 8px 18px rgba(0,0,0,0.28);
+}
+
 .menu{
     display:flex;
     align-items:center;
@@ -73,7 +160,8 @@ a{
 
 .menu a:hover,
 .menu a[aria-current="page"]{
-    background:rgba(232,240,251,0.18);
+    background:rgba(56,184,111,0.22);
+    box-shadow:inset 0 -3px 0 var(--verde-brillante);
 }
 
 .hero{
@@ -114,8 +202,9 @@ a{
 
 .etiqueta{
     display:inline-block;
-    background:var(--celeste);
+    background:var(--verde-claro);
     color:var(--azul);
+    border-left:5px solid var(--verde);
     padding:6px 10px;
     border-radius:6px;
     font-weight:700;
@@ -140,7 +229,7 @@ a{
 }
 
 .campo label{
-    color:var(--azul);
+    color:var(--verde);
     font-weight:700;
 }
 
@@ -162,7 +251,7 @@ select{
 button,
 .contenido-card a,
 .boton-secundario{
-    background:var(--azul);
+    background:var(--verde);
     color:var(--blanco);
     border:0;
     text-decoration:none;
@@ -188,8 +277,8 @@ button:hover,
     margin-left:12px;
     padding:7px 10px;
     border-radius:6px;
-    background:var(--fondo);
-    color:var(--azul);
+    background:var(--rojo-claro);
+    color:var(--rojo);
     text-decoration:none;
 }
 
@@ -222,11 +311,12 @@ button:hover,
 
 .resumen-servicio article{
     padding:18px;
+    border-top:5px solid var(--verde);
 }
 
 .dato{
     display:block;
-    color:var(--azul);
+    color:var(--verde);
     font-size:1.65rem;
     font-weight:800;
 }
@@ -241,6 +331,15 @@ button:hover,
 
 .card-home{
     overflow:hidden;
+    border-top:5px solid var(--verde);
+}
+
+.card-home:nth-child(2){
+    border-top:5px solid var(--rojo);
+}
+
+.card-home:nth-child(3){
+    border-top:5px solid var(--verde);
 }
 
 .card-home img{
@@ -256,7 +355,7 @@ button:hover,
 
 .contenido-card h2,
 .tarjeta h2{
-    color:var(--azul);
+    color:var(--verde);
     line-height:1.2;
     margin-bottom:10px;
 }
@@ -285,6 +384,11 @@ button:hover,
 .tarjeta{
     padding:24px;
     margin-bottom:24px;
+    border-left:5px solid var(--verde);
+}
+
+.grid-dos-columnas .tarjeta:nth-child(even){
+    border-left-color:var(--rojo);
 }
 
 .grid-dos-columnas{
@@ -310,7 +414,7 @@ button:hover,
     position:relative;
     min-height:104px;
     padding:16px 14px 14px 48px;
-    background:var(--celeste);
+    background:var(--verde-claro);
     border-left:5px solid var(--verde);
     border-radius:8px;
     counter-increment:estacion;
@@ -326,7 +430,7 @@ button:hover,
     display:grid;
     place-items:center;
     border-radius:50%;
-    background:var(--azul);
+    background:var(--rojo);
     color:var(--blanco);
     font-size:0.78rem;
     font-weight:800;
@@ -384,7 +488,7 @@ button:hover,
     padding:10px 12px;
     color:var(--muted);
     font-size:0.92rem;
-    border-top:1px solid var(--borde);
+    border-top:3px solid var(--verde);
 }
 
 .tabla-scroll{
@@ -409,8 +513,12 @@ td{
 }
 
 th{
-    background:var(--azul);
+    background:var(--verde);
     color:var(--blanco);
+}
+
+tbody tr:nth-child(even){
+    background:var(--verde-claro);
 }
 
 .tabla-compacta{
@@ -430,7 +538,7 @@ th{
 }
 
 .item-acceso{
-    background:#eef6f1;
+    background:var(--verde-claro);
     border-left:5px solid var(--verde);
     padding:18px;
     border-radius:8px;
@@ -438,11 +546,13 @@ th{
 
 .item-acceso h3{
     margin-bottom:8px;
-    color:var(--azul);
+    color:var(--verde);
 }
 
 .footer{
-    background:var(--azul-oscuro);
+    background:
+        linear-gradient(90deg,var(--verde) 0 18%,var(--rojo) 18% 30%,transparent 30% 100%),
+        var(--azul-oscuro);
     color:var(--blanco);
     text-align:center;
     padding:20px 8%;
@@ -475,6 +585,34 @@ th{
 
     .menu{
         width:100%;
+    }
+
+    .ramal-logo{
+        max-width:100%;
+    }
+
+    .ramal-icono{
+        flex-basis:78px;
+        width:78px;
+        height:78px;
+    }
+
+    .ramal-icono::before{
+        left:27px;
+    }
+
+    .ramal-icono::after{
+        right:27px;
+    }
+
+    .ramal-icono span{
+        width:48px;
+        height:48px;
+        font-size:1.25rem;
+    }
+
+    .logo-texto small{
+        font-size:0.78rem;
     }
 
     .menu a{
